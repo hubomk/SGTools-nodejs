@@ -1,4 +1,4 @@
-const CryptoJS = require("./AES/crypto-js");
+const CryptoJS = require("crypto-js");
 
 exports.AESEncrypt = function (data, key, iv) {
   data = CryptoJS.enc.Utf8.parse(data);

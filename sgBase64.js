@@ -1,4 +1,4 @@
-const CryptoJS = require("./AES/crypto-js");
+const CryptoJS = require("crypto-js");
 
 exports.base64ToString = (str) => {
   var data = CryptoJS.enc.Base64.parse(str);

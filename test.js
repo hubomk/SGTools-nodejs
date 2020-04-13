@@ -47,8 +47,22 @@ const test_sgBase64 = function () {
   console.log("_str_org", _str_org);
 };
 
+const test_sgAES = function () {
+  let sgAES = sgtools.sgAES;
+
+  let _str = '这是测试字符串。';
+  console.log("_str", _str);
+
+  let _str_encrypt = sgAES.AESEncrypt(_str, "123456", "12345678901234567890123456789012");
+  console.log("_str_encrypt", _str_encrypt);
+
+  let _str_decrypt = sgAES.AESDecrypt(_str_encrypt, "123456", "12345678901234567890123456789012");
+  console.log("_str_decrypt", _str_decrypt);
+};
+
 // test_sgRequest();
 
 // test_sgUtils();
 // test_sgStorage();
-test_sgBase64();
+// test_sgBase64();
+test_sgAES();

@@ -60,9 +60,29 @@ const test_sgAES = function () {
   console.log("_str_decrypt", _str_decrypt);
 };
 
+const test_sgRSA = function () {
+  let sgRSA = sgtools.sgRSA;
+  let sgStorage = sgtools.sgStorage;
+
+  sgRSA.RSA_initKeys();
+
+  let _publicKey = sgStorage.getItem('key_local_public');
+  let _privateKey = sgStorage.getItem('key_local_private');
+
+  let _str = '这是测试字符串。';
+  console.log("_str", _str);
+
+  let _str_encrypt = sgRSA.RSA_encrypt_publicKey(_publicKey, _str);
+  console.log("_str_encrypt", _str_encrypt);
+
+  let _str_decrypt = sgRSA.RSA_decrypt_privateKey(_privateKey, _str_encrypt);
+  console.log("_str_decrypt", _str_decrypt);
+};
+
 // test_sgRequest();
 
 // test_sgUtils();
 // test_sgStorage();
 // test_sgBase64();
-test_sgAES();
+// test_sgAES();
+test_sgRSA();

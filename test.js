@@ -81,8 +81,14 @@ const test_sgRSA = function () {
 
 // test_sgRequest();
 
-// test_sgUtils();
-// test_sgStorage();
-// test_sgBase64();
-// test_sgAES();
+console.log('#########################################');
+test_sgUtils();
+console.log('#########################################');
+test_sgStorage();
+console.log('#########################################');
+test_sgBase64();
+console.log('#########################################');
+test_sgAES();
+console.log('#########################################');
 test_sgRSA();
+console.log('#########################################');
